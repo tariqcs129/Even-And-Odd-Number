@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(184, 174, 174);
+        }
+      
+        input[type=number] {
+            background-color: rgb(221, 202, 202);
+            width: 200px;
+            margin: 14px;
+            padding: 14px;
+            margin-left: 0px;
+        }
+        button[type=submit]{
+            background-color: rgb(221, 202, 202);
+            width: 150px;
+            margin: 14px;
+            padding: 14px;
+            margin-left: 0px;
+            border-radius: 30px;
+        }
+        .top{
+            font-size: larger;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+        }
+        .mid{
+            background-color: rgb(182, 240, 182);
+            width: 500px;
+            border-radius: 50px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        h1{
+            text-align: center;
+            text-shadow: 3px 3px 3px yellow;
+            font-size: 40px;
+            font-style: italic;
+        
+        }
+        #result{
+            margin-left: 0px;
+            font-style: italic;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1> Even & Odd Number Checker </h1>
+    <div class="top">
+        <div class="mid">
+            <form onsubmit="cheker(); return false">
+                <label for ="num" >Enter Number</label><br>
+                <input type="number" id="num" placeholder="Enter Number Here">
+                <br>
+          <button type="submit" onsubmit="cheker(); return false" >Check</button>
+                
+            </form>
+    <h3 id="result" ></h3>
+    </div>
+</div>
+
+
+    <script>
+function cheker(){
+
+    let num1 = +document.querySelector("#num").value;
+   if (num1 % 2 == 0)
+   {
+
+    document.querySelector("#result").innerHTML = `Your Number is Even`;
+   }
+   else 
+   {
+    document.querySelector("#result").innerHTML = `Your Number is Odd`;
+   }
+    
+}
+    </script>
+</body>
+</html>
